@@ -57,11 +57,12 @@ body {
 
 .mv .mv-inner h1 {
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 5px;
   font-size: 1.6rem;
   font-weight: bold;
   letter-spacing: 0.2em;
   font-family: 'Noto Serif JP', serif;
+  text-align: center;
 }
 
 section h2 {
