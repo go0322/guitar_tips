@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -29,36 +29,39 @@ body {
 }
 
 .mv {
-  background-image: url(../image/guitar.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mv img {
+  display: block;
   width: 100%;
   height: 250px;
-  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.mv .mv-inner {
-  background-color: rgba(0, 0, 0, 0.4);
+.mv .mv_inner {
   position: absolute;
-  height: 100%;
-  width: 100%;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.mv .mv-inner h1 {
+.mv .mv_inner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  margin: 0 auto;
   color: #fff;
   padding: 10px 5px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
   letter-spacing: 0.2em;
   font-family: 'Noto Serif JP', serif;
@@ -147,10 +150,10 @@ footer {
 }
 
 @media (min-width: 769px) {
-  .mv {
-    height: 300px;
+  .mv img {
+    height: 400px;
   }
-  .mv .mv-inner h1 {
+  .mv .mv_inner h1 {
     font-size: 3rem;
     letter-spacing: 0.4em;
   }

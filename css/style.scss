@@ -1,6 +1,5 @@
 @import "variables";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&display=swap');
 
 * {
   box-sizing: border-box
@@ -33,26 +32,32 @@ body {
 
 //mainVisual
 .mv {
-  background-image: url(../image/guitar.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 250px;
+  // float: left;
   position: relative;
-  .mv-inner {
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    height: 100%;
+  box-sizing: border-box;
+  img{
+    display: block;
     width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  .mv_inner{
+    position: absolute;
     top: 0;
     left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
     h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      margin: 0 auto;
       color: #fff;
       padding: 10px 5px;
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-weight: bold;
       letter-spacing: 0.2em;
       font-family: 'Noto Serif JP', serif;
@@ -136,8 +141,10 @@ footer {
 //PC
 @media(min-width: 769px) {
   .mv {
-    height: 300px;
-    .mv-inner {
+    img{
+      height: 400px;
+    }
+    .mv_inner{
       h1 {
         font-size: 3rem;
         letter-spacing: 0.4em;
